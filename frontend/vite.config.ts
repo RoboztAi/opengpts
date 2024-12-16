@@ -12,7 +12,7 @@ export default defineConfig({
     },
     proxy: {
       "^/(assistants|threads|ingest|runs)": {
-        target: process.env.VITE_BACKEND_URL || "https://gpt-api-dev.0xai.io",
+        target: "https://gpt-api-dev.0xai.io",
         changeOrigin: true,
         rewrite: (path) => path.replace("/____LANGSERVE_BASE_URL", ""),
 
